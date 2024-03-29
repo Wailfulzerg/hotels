@@ -1,0 +1,27 @@
+[tool.black]
+line-length = 99
+target-version = ["py39"]
+
+[tool.isort]
+# https://pycqa.github.io/isort/docs/configuration/config_files.html
+combine_as_imports = true
+force_grid_wrap = 2
+include_trailing_comma = true
+lines_after_imports = -1
+lines_between_types = 1
+profile = "black"
+skip_gitignore = true
+use_parentheses = true
+
+[tool.autoflake]
+in-place = true
+quiet = true
+recursive = true
+remove-all-unused-imports = true
+remove-unused-variables = true
+
+[tool.pytest.ini_options]
+addopts = [
+  "--import-mode=importlib",
+]
+asyncio_mode = "auto"
