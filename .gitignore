@@ -2,3 +2,7 @@
 .idea/
 
 *.pyc
+
+go.mod
+
+main.go

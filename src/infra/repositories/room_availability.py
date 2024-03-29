@@ -1,4 +1,7 @@
-from datetime import datetime, date
+from datetime import (
+    date,
+    datetime,
+)
 
 from src.core.room_availability.repositories import AbstractRoomAvailabilityRepository
 
@@ -32,7 +35,7 @@ class DBRoomAvailabilityRepository(AbstractRoomAvailabilityRepository):
                 dates_availability.append(availability)
             else:
                 return False
-        if len(dates) != len(dates_availability): 
+        if len(dates) != len(dates_availability):
             for date_availability in dates_availability:
                 date_availability["quota"] += 1
             return False

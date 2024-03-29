@@ -1,6 +1,6 @@
 from datetime import (
-    datetime,
-    timedelta, date,
+    date,
+    timedelta,
 )
 
 from pydantic import EmailStr
